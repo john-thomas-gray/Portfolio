@@ -517,6 +517,9 @@ nav {
     grid-row: 2;
     gap: 1rem;
   }
+  .card {
+    text-align: justify;
+  }
 }
 
 /* PROJECTS */
