@@ -35,19 +35,6 @@ export const myProjects = [
     },
     {
         id: 3,
-        image: portfolio,
-        link: 'https://github.com/john-thomas-gray/Portfolio',
-        title: 'Portfolio Site',
-        description: 'A single page web application showcasing my skills ' +
-        'and projects, built with the React.js framework. Written in JavaScript, ' +
-        'with JSX, CSS, and Bootstrap for styling. The nav bar uses DOM manipulation to ' +
-        'take the user to the selected section. UseEffect hook makes "email address copied" ' +
-        'message follow the user\'s cursor. EmailJS, a third-party API, powers the contact form.  ' +
-        'I deployed the site with Netlify.',
-        tags: ['React', 'Bootstrap', 'DOM', 'CSS', 'EmailJS', 'Netlify', 'JSX', 'JavaScript'],
-    },
-    {
-        id: 4,
         image: colorChameleon,
         link: 'https://senorsuerte.itch.io/color-chameleon',
         title: 'Color Chameleon',
@@ -58,6 +45,19 @@ export const myProjects = [
         'Each of five enemy types uses a distinct ability, augmented when like-colored enemies group together.',
         tags: ['C#', 'Unity', 'Event System', 'N-ary Tree', 'Queues' ]
             // 'json', 'PostgreSQL']
+    },
+    {
+        id: 4,
+        image: portfolio,
+        link: 'https://github.com/john-thomas-gray/Portfolio',
+        title: 'Portfolio Site',
+        description: 'A single page web application showcasing my skills ' +
+        'and projects, built with the React.js framework. Written in JavaScript, ' +
+        'with JSX, CSS, and Bootstrap for styling. The nav bar uses DOM manipulation to ' +
+        'take the user to the selected section. UseEffect hook makes "email address copied" ' +
+        'message follow the user\'s cursor. EmailJS, a third-party API, powers the contact form.  ' +
+        'I deployed the site with Netlify.',
+        tags: ['React', 'Bootstrap', 'DOM', 'CSS', 'EmailJS', 'Netlify', 'JSX', 'JavaScript'],
     },
     {
         id: 5,

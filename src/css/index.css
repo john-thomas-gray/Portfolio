@@ -46,11 +46,8 @@
 
 .landing {
   background-image: linear-gradient(to right, #395B4D 55%, #012F23 100%);
-  background-size: cover;
-  background-position: center;
-  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
   height: 100vh;
-  place-items: center;
 }
 
 .landing .information {
@@ -131,6 +128,33 @@
   }
   .contact-icons {
     justify-self: center;
+  }
+}
+
+@media(max-width: 700px)
+{
+  .main-section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    column-gap: 0rem;
+    row-gap: 0rem;
+    padding: 4rem 0rem;
+  }
+  .profile-image img {
+    max-width: 20rem;
+    min-height: 20rem;
+  }
+  .landing h1 {
+    font-family: 'Frutiger', sans-serif;
+    font-size: 4rem;
+    color: white;
+    font-weight: bolder;
+    text-align: left;
+  }
+  .landing h2 {
+    font-family: 'Frutiger', sans-serif;
+    font-size: 1.5rem;
   }
 }
 
@@ -296,6 +320,17 @@ nav {
   }
 }
 
+@media(max-width: 600px) {
+  .main-section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    column-gap: 0rem;
+    row-gap: 2rem;
+    padding: 4rem 0rem;
+  }
+}
+
 
 /* ABOUT */
 
@@ -365,6 +400,12 @@ nav {
   justify-self: center;
 }
 
+@media(max-width: 600px) {
+  .skills {
+    padding: 4rem auto;
+  }
+}
+
 /* SKILLS */
 
 
@@ -402,7 +443,7 @@ nav {
 
 .projects .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-column: 1 / -1;
   grid-row: 2;
   gap: 1rem;
