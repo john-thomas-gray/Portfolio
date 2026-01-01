@@ -33,6 +33,7 @@ a {
 .layout {
   min-height: 100vh;
   display: flex;
+  flex: 1 1 0;
 }
 
 .nav {
@@ -48,8 +49,8 @@ a {
 }
 
 .nav-item {
-  flex: 1 1 0;
   display: flex;
+  flex: 1 1 0;
   align-items: center;
   justify-content: center;
   border: 1px solid red;
