@@ -1,29 +1,24 @@
-# Portfolio Website (Static HTML + CSS)
-This portfolio is intentionally **HTML + CSS only** (no React, no build step).
+# Portfolio Website (React)
+This portfolio is now a **React + Vite** app using **React Router** with nested routes.
 
-## Routes (folder-based)
-This uses basic “routing” via folders (static hosting friendly):
-- `/` → `index.html`
-- `/about/` → `about/index.html`
-- `/projects/` → `projects/index.html`
-- `/contact/` → `contact/index.html`
-- `404.html` for missing pages (some hosts require configuration to use it)
+## Routing (nested layout)
+Shared layout (header/nav) lives at the top level, and pages render as children via `<Outlet />`:
+- `/` → Home
+- `/projects` → Projects
+- `/about` → About
+- `*` → 404 (client-side)
 
-Shared styling lives in `css/styles.css`.
-
-Assets are in `assets/`:
-- `assets/images/`
-- `assets/fonts/`
-- `assets/resume/Resume.pdf`
+## Styling + assets
+- CSS: `css/home.css` (imported from `src/main.jsx`)
+- Images/fonts: `assets/` (import from React as needed)
+- Favicon: `public/favicon.png`
 
 ## Run locally
 From the repo root:
 
 ```bash
+npm install
 npm run dev
 ```
 
-Then open `http://localhost:8000`.
-
-## Author
-John Gray
+Vite will print the local URL in your terminal.
