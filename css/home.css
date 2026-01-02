@@ -1,12 +1,13 @@
 html,
 body {
   height: 100%;
-  background-color: aquamarine;
+  background-color: rgb(153, 77, 145);
 }
 
 body {
   margin: 0;
   font-size: 16px;
+  font-weight: 1000;
   line-height: 1.5;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
@@ -33,7 +34,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom-width: 1vh;
+  border-bottom-width: 0.6vh;
   border-bottom-style: solid;
   text-transform: uppercase;
   color: whitesmoke;
@@ -41,12 +42,12 @@ a {
 
 #nav-one {
   background-color: rgba(129, 182, 188);
-  border-bottom-color: rgb(190, 242, 248);
+  border-bottom-color: rgb(179, 229, 235);
 }
 
 #nav-two {
-  background-color: rgb(255, 232, 115);
-  border-bottom-color: rgb(255, 247, 206);
+  background-color: rgba(77, 85, 177);
+  border-bottom-color: rgb(187, 193, 255);
 }
 
 #nav-three {
@@ -55,7 +56,7 @@ a {
 }
 
 #nav-four {
-  background-color: rgba(21, 89, 13);
+  background-color: rgb(255, 232, 115);
   border-bottom-width: 0;
 }
 
@@ -67,34 +68,61 @@ main {
 }
 
 .main-image {
-  display: flex;
-  justify-content: center;
-  height: 400px;
-  background-color: red;
+  overflow: hidden;
+  height: 500px;
 }
 
 .profile-img {
-  height: inherit;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .main-name {
+  display: flex;
+  align-items: center;
+  width: 100%;
   height: 90px;
-  background-color: blue;
+  background-color: rgb(255, 232, 115);
+}
+
+.text-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 600px;
+  margin-inline: 10px;
+  font-size: 24px;
+  color: rgb(56, 56, 56);
+}
+
+.text-name {
+  font-weight: 800;
+}
+
+.text-split {
+  font-size: 48px;
+  font-weight: 200;
+}
+
+.text-title {
+  font-weight: 300;
 }
 
 .main-link {
   height: 150px;
-  background-color: yellow;
+  background-color: rgb(161, 200, 238);
 }
 
 .main-quote {
   height: 150px;
-  background-color: green;
+  background-color: rgb(165, 213, 165);
 }
 
 .social-links {
-  height: 160px;
-  background-color: purple;
+  height: 120px;
+  background-color: rgb(186, 130, 186);
 }
 
 @media (max-width: 850px) {
@@ -115,8 +143,9 @@ main {
   }
 
   #nav-four {
-    border-bottom-color: rgb(62, 144, 52);
-    border-bottom-width: 1vh;
+    background-color: rgb(255, 232, 115);
+    border-bottom-color: rgb(255, 247, 206);
+    border-bottom-width: 0.6vh;
   }
 
   main {
@@ -126,9 +155,6 @@ main {
   }
 
   .main-image {
-    display: flex;
-    justify-content: center;
     height: 400px;
-    background-color: red;
   }
 }
