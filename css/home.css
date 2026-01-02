@@ -10,6 +10,8 @@ body {
   font-weight: 1000;
   line-height: 1.5;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  height: 100%;
+  overflow-y: auto;
 }
 
 a {
@@ -19,6 +21,7 @@ a {
 
 .layout {
   display: flex;
+  flex: column;
   min-height: 100vh;
 }
 
@@ -63,13 +66,7 @@ a {
 main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-}
-
-.main-image {
-  overflow: hidden;
-  height: 500px;
+  width: 100%;
 }
 
 .profile-img {
@@ -82,7 +79,7 @@ main {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 90px;
+  height: 70px;
   background-color: rgb(255, 232, 115);
 }
 
@@ -90,42 +87,54 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+
   width: 600px;
-  margin-inline: 10px;
   font-size: 24px;
   color: rgb(56, 56, 56);
 }
 
 .text-name {
   font-weight: 800;
+  margin-left: 24px;
 }
 
 .text-split {
+  margin-inline: 10px;
   font-size: 48px;
   font-weight: 200;
+  margin-bottom: 7px;
 }
 
 .text-title {
   font-weight: 300;
 }
 
-.main-link {
-  height: 150px;
-  background-color: rgb(161, 200, 238);
+.main-image {
+  overflow: hidden;
+  height: 445px;
 }
 
-.main-quote {
-  height: 150px;
+.main-pair {
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+}
+
+.pair-one {
+  flex: 1;
+  background-color: rgb(161, 200, 238);
+}
+.pair-two {
+  flex: 1;
   background-color: rgb(165, 213, 165);
 }
 
 .social-links {
-  height: 120px;
+  height: 119px;
   background-color: rgb(186, 130, 186);
 }
 
-@media (max-width: 850px) {
+@media (max-width: 700px) {
   .layout {
     flex-direction: column;
   }
@@ -156,5 +165,18 @@ main {
 
   .main-image {
     height: 400px;
+  }
+
+  .text-body {
+    font-size: 16px;
+  }
+
+  .text-title {
+    width: 160px;
+  }
+
+  .text-name {
+    font-weight: 800;
+    margin-left: 12px;
   }
 }
