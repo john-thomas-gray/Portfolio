@@ -3,8 +3,9 @@ import "./Projects.css";
 import beecore from "../../assets/images/beecore.png";
 import colorChameleon from "../../assets/images/colorchameleon.png";
 import conferencego from "../../assets/images/conferencego.png";
-import FourDogNightTitle from "../../assets/images/FourDogNightTitle.png";
-import SFStreet from "../../assets/images/SFStreet.png";
+import fourDogNightTitle from "../../assets/images/fourDogNightTitle.png";
+import sFStreet from "../../assets/images/sFStreet.png";
+import profile from "../../assets/images/portfolio.png";
 
 function colorForIndex(i) {
   // Deterministic "random-ish" color per card (stable across reloads)
@@ -33,11 +34,11 @@ export function Projects() {
   const projects = useMemo(
     () => [
       { name: "Bee Core", image: beecore },
-      { name: "Project Six", image: SFStreet },
+      { name: "profile", image: profile },
       { name: "Conference Go", image: conferencego },
       { name: "Color Chameleon", image: colorChameleon },
-      { name: "Four Dog Night", image: FourDogNightTitle },
-      { name: "San Francisco", image: SFStreet },
+      { name: "Four Dog Night", image: fourDogNightTitle },
+      { name: "San Francisco", image: sFStreet },
     ],
     []
   );
@@ -100,7 +101,6 @@ export function Projects() {
               name={project.name}
               image={project.image}
               borderColor={colorForIndex(renderIdx)}
-              // Explicit placement: 2-high grid filled by columns (or 1-high when short)
               style={{
                 gridColumn: isShortViewport
                   ? renderIdx + 1

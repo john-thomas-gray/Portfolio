@@ -110,9 +110,18 @@ main {
   font-weight: 300;
 }
 
-.main-image {
+.main-image-container {
   overflow: hidden;
   height: 505px;
+  min-height: 0;
+}
+
+.profile-img {
+  flex: 1 1 0;
+  min-height: 0;
+  background: rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
 }
 
 .main-pair {
@@ -121,24 +130,71 @@ main {
   height: 250px;
 }
 
-.pair-one {
-  flex: 1;
-  background-color: rgb(161, 200, 238);
-}
+.pair-one,
 .pair-two {
-  flex: 1;
+  display: flex;
+  flex: 0 0 50%;
+  max-width: 50%;
+  min-width: 0;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pair-one {
+  background-color: white;
+  font-size: 48px;
+}
+
+.pair-two {
   background-color: rgb(165, 213, 165);
+}
+
+.pair-one-swap {
+  /* Overlay braille + text so they occupy the exact same footprint */
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  height: 1em; /* ties box height to the current font-size */
+  width: max-content;
+  cursor: pointer;
+}
+
+.pair-one-swap > * {
+  grid-area: 1 / 1;
+  transition: opacity 200ms ease;
+}
+
+.pair-one-braille {
+  /* Make the image the same size as the text footprint */
+  height: 1em;
+  width: 100%;
+  object-fit: contain;
+  opacity: 1;
+}
+
+.pair-one-text {
+  line-height: 1;
+  opacity: 0;
+}
+
+.pair-one:hover .pair-one-braille {
+  opacity: 0;
+}
+
+.pair-one:hover .pair-one-text {
+  opacity: 1;
+}
+
+.wadjet {
+  max-height: 200px;
+  justify-content: center;
 }
 
 .social-links {
   height: 109px;
   background-color: rgb(186, 130, 186);
-}
-
-.profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 @media (max-width: 940px) {
