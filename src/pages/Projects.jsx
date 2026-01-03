@@ -13,10 +13,13 @@ function colorForIndex(i) {
   return `hsl(${hue} 85% 65%)`;
 }
 
-function ProjectCard({ name, image, borderColor, style }) {
+function ProjectCard({ name, image, href, borderColor, style }) {
   return (
-    <article
+    <a
       className="project-card"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       style={{ borderColor, ...style }}
       aria-label={name}
     >
@@ -24,21 +27,35 @@ function ProjectCard({ name, image, borderColor, style }) {
         {image ? <img className="project-card-img" src={image} alt="" /> : null}
       </div>
       <div className="project-card-name">{name}</div>
-    </article>
+    </a>
   );
 }
 
 export function Projects() {
-  // Add projects by appending objects: { name, image }
-  // - `image` should be an imported asset or a URL string.
   const projects = useMemo(
     () => [
-      { name: "Bee Core", image: beecore },
-      { name: "profile", image: profile },
-      { name: "Conference Go", image: conferencego },
-      { name: "Color Chameleon", image: colorChameleon },
-      { name: "Four Dog Night", image: fourDogNightTitle },
-      { name: "San Francisco", image: sFStreet },
+      { name: "Bee Core", image: beecore, href: "https://www.facebook.com" },
+      { name: "profile", image: profile, href: "https://www.johngraydev.com" },
+      {
+        name: "Conference Go",
+        image: conferencego,
+        href: "https://www.facebook.com",
+      },
+      {
+        name: "Color Chameleon",
+        image: colorChameleon,
+        href: "https://www.facebook.com",
+      },
+      {
+        name: "Four Dog Night",
+        image: fourDogNightTitle,
+        href: "https://www.fourdognight.com",
+      },
+      {
+        name: "San Francisco",
+        image: sFStreet,
+        href: "https://www.sanfrancisco.com",
+      },
     ],
     []
   );
@@ -52,7 +69,8 @@ export function Projects() {
 
   useEffect(() => {
     // Keep this in sync with `Projects.css` media query.
-    const mq = window.matchMedia("(max-height: 500px)");
+    const GRID_MAX_HEIGHT = "500px";
+    const mq = window.matchMedia(`(max-height: ${GRID_MAX_HEIGHT})`);
     const sync = () => setIsShortViewport(mq.matches);
     sync();
     mq.addEventListener("change", sync);
@@ -100,6 +118,7 @@ export function Projects() {
               key={renderIdx}
               name={project.name}
               image={project.image}
+              href={project.href}
               borderColor={colorForIndex(renderIdx)}
               style={{
                 gridColumn: isShortViewport

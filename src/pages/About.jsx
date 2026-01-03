@@ -1,7 +1,10 @@
 import React from "react";
+import Socials from "../components/Socials";
 
 export function About() {
-  // This page was previously empty in `about/index.html`.
-  // Keeping it minimal until you add real content.
-  return <div />;
+  return (
+    <>
+      <Socials />
+    </>
+  );
 }

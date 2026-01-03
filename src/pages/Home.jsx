@@ -4,6 +4,8 @@ import profileImg from "../../assets/images/profile.png";
 import wadjet from "../../assets/images/wadjet.png";
 import tempBraille from "../../assets/images/tempBraille.png";
 
+import Socials from "../components/Socials";
+
 export function Home() {
   return (
     <>
@@ -22,7 +24,7 @@ export function Home() {
         </div>
       </div>
       <div className="main-pair">
-        <div className="pair-one">
+        <a className="pair-one" href="https://www.wadjet.com">
           <div className="pair-one-swap" aria-label="Out of Sight">
             <img
               className="pair-one-braille"
@@ -32,14 +34,19 @@ export function Home() {
             <span className="pair-one-text">Out of Sight</span>
           </div>
           <img className="wadjet" src={wadjet} />
-        </div>
-        <div className="pair-two"></div>
+        </a>
+        <a
+          className="pair-two"
+          href="https://www.youtube.com/watch?v=no_elVGGgW8"
+        >
+          <span>
+            "This is a thousand monkeys working at a thousand typewriters. Soon,
+            they'll have written the greatest novel known to man!"
+          </span>
+          <span className="signature">Mr. Burns</span>
+        </a>
       </div>
-      <div className="social-links">
-        <div className="social"></div>
-        <div className="social"></div>
-        <div className="social"></div>
-      </div>
+      <Socials />
     </>
   );
 }
