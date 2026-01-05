@@ -96,6 +96,12 @@ a {
   font-weight: 100;
 }
 
+@media (max-width: 900px) {
+  .nav-item {
+    font-size: 26px;
+  }
+}
+
 #nav-one {
   background-color: var(--main-one);
   border-bottom-color: var(--secondary-one);
@@ -140,7 +146,7 @@ main {
   object-fit: cover;
 }
 
-.main-name {
+.main-title {
   display: flex;
   align-items: center;
   width: 100%;
@@ -148,18 +154,8 @@ main {
   background-color: var(--main-four);
 }
 
-.text-body {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  width: 600px;
-  font-size: 24px;
-  color: var(--text-body);
-}
-
 .text-name {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 800;
   margin-left: 24px;
 }
@@ -169,6 +165,17 @@ main {
   font-size: 48px;
   font-weight: 200;
   margin-bottom: 7px;
+}
+
+.text-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 900px;
+  font-size: 40px;
+  color: var(--text-body);
+  border: dashed black 1px;
 }
 
 .text-title {
@@ -241,9 +248,17 @@ main {
   .pair-two span {
     font-size: 24px;
   }
+  .pair-two:hover span {
+    text-shadow: 1px 1px 2px var(--secondary-one);
+    font-size: 24px;
+  }
 }
 @media (max-width: 1370px) {
   .pair-two span {
+    font-size: 20px;
+  }
+  .pair-two:hover span {
+    text-shadow: 1px 1px 2px var(--secondary-one);
     font-size: 20px;
   }
 }
@@ -251,9 +266,17 @@ main {
   .pair-two span {
     font-size: 18px;
   }
+  .pair-two:hover span {
+    text-shadow: 1px 1px 2px var(--secondary-one);
+    font-size: 18px;
+  }
 }
 @media (max-width: 875px) {
   .pair-two span {
+    font-size: 16px;
+  }
+  .pair-two:hover span {
+    text-shadow: 1px 1px 2px var(--secondary-one);
     font-size: 16px;
   }
 }
@@ -332,11 +355,6 @@ main {
 
 .pair-one:hover .wadjet {
   max-height: 205px;
-}
-
-.pair-two:hover span {
-  text-shadow: 1px 1px 2px var(--secondary-one);
-  font-size: 20.5px;
 }
 
 @media (max-width: 700px) {

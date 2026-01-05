@@ -77,7 +77,7 @@ export function Home() {
           className="profile-img"
         />
       </div>
-      <div className="main-name">
+      <div className="main-title">
         <div className="text-body">
           <span className="text-name">John Gray</span>
           <span className="text-split">|</span>

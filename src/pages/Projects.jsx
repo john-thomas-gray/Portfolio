@@ -54,10 +54,17 @@ export function Projects() {
     []
   );
 
-  const projectsLoop = useMemo(
-    () => [...projects, ...projects, ...projects],
-    [projects]
-  );
+  const projectsLoop = useMemo(() => [...projects, ...projects, ...projects], [projects]);
+
+  const [isNarrowViewport, setIsNarrowViewport] = useState(false);
+  useEffect(() => {
+    // Keep this in sync with `projects.css` mobile breakpoint.
+    const mq = window.matchMedia("(max-width: 700px)");
+    const sync = () => setIsNarrowViewport(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
 
   const [isShortViewport, setIsShortViewport] = useState(false);
 
@@ -77,6 +84,9 @@ export function Projects() {
   const scrollRef = useRef(null);
 
   useEffect(() => {
+    // Mobile is a vertical list; no infinite horizontal looping needed.
+    if (isNarrowViewport) return;
+
     const el = scrollRef.current;
     if (!el) return;
 
@@ -92,7 +102,9 @@ export function Projects() {
 
     el.addEventListener("scroll", onScroll, { passive: true });
     return () => el.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isNarrowViewport]);
+
+  const renderProjects = isNarrowViewport ? projects : projectsLoop;
 
   return (
     <section className="projects">
@@ -103,21 +115,27 @@ export function Projects() {
       >
         <div
           className="projects-grid"
-          style={{
-            gridTemplateColumns: `repeat(${columnCount}, var(--project-card-w))`,
-          }}
+          style={
+            isNarrowViewport
+              ? undefined
+              : { gridTemplateColumns: `repeat(${columnCount}, var(--project-card-w))` }
+          }
         >
-          {projectsLoop.map((project, renderIdx) => (
+          {renderProjects.map((project, renderIdx) => (
             <ProjectCard
               key={renderIdx}
               name={project.name}
               image={project.image}
               href={project.href}
               style={{
-                gridColumn: isShortViewport
-                  ? renderIdx + 1
-                  : Math.floor(renderIdx / 2) + 1,
-                gridRow: isShortViewport ? 1 : (renderIdx % 2) + 1,
+                ...(isNarrowViewport
+                  ? null
+                  : {
+                      gridColumn: isShortViewport
+                        ? renderIdx + 1
+                        : Math.floor(renderIdx / 2) + 1,
+                      gridRow: isShortViewport ? 1 : (renderIdx % 2) + 1,
+                    }),
               }}
             />
           ))}
