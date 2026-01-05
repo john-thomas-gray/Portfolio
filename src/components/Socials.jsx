@@ -1,7 +1,7 @@
 import React from "react";
 import github from "../../assets/images/github.png";
 import linkedIn from "../../assets/images/linkedIn.png";
-import email from "../../assets/images/gmail.png";
+import email from "../../assets/images/email.png";
 
 export default function Socials() {
   return (
@@ -12,7 +12,6 @@ export default function Socials() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span>GitHub</span>
         <img src={github} alt="GitHub" />
       </a>
 
@@ -22,12 +21,10 @@ export default function Socials() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span>LinkedIn</span>
         <img src={linkedIn} alt="LinkedIn" />
       </a>
 
       <a href="mailto:johnthomgray@gmail.com" className="social-button">
-        <span>Email</span>
         <img src={email} alt="Email" />
       </a>
     </div>

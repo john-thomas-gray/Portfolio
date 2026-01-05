@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import "./Projects.css";
+import "../../css/projects.css";
 import beecore from "../../assets/images/beecore.png";
 import colorChameleon from "../../assets/images/colorchameleon.png";
 import conferencego from "../../assets/images/conferencego.png";
@@ -7,20 +7,14 @@ import fourDogNightTitle from "../../assets/images/fourDogNightTitle.png";
 import sFStreet from "../../assets/images/sFStreet.png";
 import profile from "../../assets/images/portfolio.png";
 
-function colorForIndex(i) {
-  // Deterministic "random-ish" color per card (stable across reloads)
-  const hue = (i * 47) % 360;
-  return `hsl(${hue} 85% 65%)`;
-}
-
-function ProjectCard({ name, image, href, borderColor, style }) {
+function ProjectCard({ name, image, href, style }) {
   return (
     <a
       className="project-card"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ borderColor, ...style }}
+      style={{ ...style }}
       aria-label={name}
     >
       <div className="project-card-media">
@@ -68,7 +62,7 @@ export function Projects() {
   const [isShortViewport, setIsShortViewport] = useState(false);
 
   useEffect(() => {
-    // Keep this in sync with `Projects.css` media query.
+    // Keep this in sync with `projects.css` media query.
     const GRID_MAX_HEIGHT = "500px";
     const mq = window.matchMedia(`(max-height: ${GRID_MAX_HEIGHT})`);
     const sync = () => setIsShortViewport(mq.matches);
@@ -119,7 +113,6 @@ export function Projects() {
               name={project.name}
               image={project.image}
               href={project.href}
-              borderColor={colorForIndex(renderIdx)}
               style={{
                 gridColumn: isShortViewport
                   ? renderIdx + 1

@@ -1,0 +1,93 @@
+.projects {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-scroller {
+  height: 100%;
+  width: 100%;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  /* Hide scrollbars (keep scroll behavior via trackpad/touch) */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/old Edge */
+}
+
+.projects-scroller::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.projects-grid {
+  --project-card-w: 500px;
+  display: grid;
+  grid-template-rows: repeat(2, var(1fr));
+  width: max-content;
+  height: 100%;
+}
+
+.project-card {
+  width: var(--project-card-w);
+
+  display: flex;
+  flex-direction: column;
+
+  background: transparent;
+  overflow: hidden;
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+.project-card-media {
+  flex: 1 1 0;
+  min-height: 0;
+  background: rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card-name {
+  flex: 0 0 auto;
+  padding: 10px 12px;
+  background-color: var(--main-seven);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-left: dotted #c4c3c3 1px;
+  border-left: dotted #c4c3c3 1px;
+}
+
+.project-card:hover {
+  border: white solid 2px;
+}
+
+.project-card:hover .project-card-name {
+  background-color: var(--main-six-hover);
+  color: var(--main-three);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  width: max-content;
+  height: 100%;
+}
+
+/* Keep this in sync with `projects.jsx` GRID_MAX_HEIGHT. */
+@media (max-height: 500px) {
+  .projects-grid {
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
