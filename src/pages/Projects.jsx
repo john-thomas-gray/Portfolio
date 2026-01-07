@@ -1,19 +1,13 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "../../css/projects.css";
-import beecore from "../../assets/images/beecore.png";
-import colorChameleon from "../../assets/images/colorchameleon.png";
-import conferencego from "../../assets/images/conferencego.png";
-import fourDogNightTitle from "../../assets/images/fourDogNightTitle.png";
-import sFStreet from "../../assets/images/sFStreet.png";
-import profile from "../../assets/images/portfolio.png";
+import { PROJECTS } from "../data/projects";
 
-function ProjectCard({ name, image, href, style }) {
+function ProjectCard({ name, image, to, style }) {
   return (
-    <a
+    <Link
       className="project-card"
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      to={to}
       style={{ ...style }}
       aria-label={name}
     >
@@ -21,50 +15,17 @@ function ProjectCard({ name, image, href, style }) {
         {image ? <img className="project-card-img" src={image} alt="" /> : null}
       </div>
       <div className="project-card-name">{name}</div>
-    </a>
+    </Link>
   );
 }
 
 export function Projects() {
-  const projects = useMemo(
-    () => [
-      { name: "Bee Core", image: beecore, href: "https://www.facebook.com" },
-      { name: "profile", image: profile, href: "https://www.johngraydev.com" },
-      {
-        name: "Conference Go",
-        image: conferencego,
-        href: "https://www.facebook.com",
-      },
-      {
-        name: "Color Chameleon",
-        image: colorChameleon,
-        href: "https://www.facebook.com",
-      },
-      {
-        name: "Four Dog Night",
-        image: fourDogNightTitle,
-        href: "https://www.fourdognight.com",
-      },
-      {
-        name: "San Francisco",
-        image: sFStreet,
-        href: "https://www.sanfrancisco.com",
-      },
-    ],
-    []
+  const projects = useMemo(() => PROJECTS, []);
+
+  const projectsLoop = useMemo(
+    () => [...projects, ...projects, ...projects],
+    [projects]
   );
-
-  const projectsLoop = useMemo(() => [...projects, ...projects, ...projects], [projects]);
-
-  const [isNarrowViewport, setIsNarrowViewport] = useState(false);
-  useEffect(() => {
-    // Keep this in sync with `projects.css` mobile breakpoint.
-    const mq = window.matchMedia("(max-width: 700px)");
-    const sync = () => setIsNarrowViewport(mq.matches);
-    sync();
-    mq.addEventListener("change", sync);
-    return () => mq.removeEventListener("change", sync);
-  }, []);
 
   const [isShortViewport, setIsShortViewport] = useState(false);
 
@@ -84,9 +45,6 @@ export function Projects() {
   const scrollRef = useRef(null);
 
   useEffect(() => {
-    // Mobile is a vertical list; no infinite horizontal looping needed.
-    if (isNarrowViewport) return;
-
     const el = scrollRef.current;
     if (!el) return;
 
@@ -102,9 +60,7 @@ export function Projects() {
 
     el.addEventListener("scroll", onScroll, { passive: true });
     return () => el.removeEventListener("scroll", onScroll);
-  }, [isNarrowViewport]);
-
-  const renderProjects = isNarrowViewport ? projects : projectsLoop;
+  }, []);
 
   return (
     <section className="projects">
@@ -115,27 +71,21 @@ export function Projects() {
       >
         <div
           className="projects-grid"
-          style={
-            isNarrowViewport
-              ? undefined
-              : { gridTemplateColumns: `repeat(${columnCount}, var(--project-card-w))` }
-          }
+          style={{
+            gridTemplateColumns: `repeat(${columnCount}, var(--project-card-w))`,
+          }}
         >
-          {renderProjects.map((project, renderIdx) => (
+          {projectsLoop.map((project, renderIdx) => (
             <ProjectCard
               key={renderIdx}
-              name={project.name}
-              image={project.image}
-              href={project.href}
+              name={project.title}
+              image={project.cardImage}
+              to={`/projects/${project.slug}`}
               style={{
-                ...(isNarrowViewport
-                  ? null
-                  : {
-                      gridColumn: isShortViewport
-                        ? renderIdx + 1
-                        : Math.floor(renderIdx / 2) + 1,
-                      gridRow: isShortViewport ? 1 : (renderIdx % 2) + 1,
-                    }),
+                gridColumn: isShortViewport
+                  ? renderIdx + 1
+                  : Math.floor(renderIdx / 2) + 1,
+                gridRow: isShortViewport ? 1 : (renderIdx % 2) + 1,
               }}
             />
           ))}

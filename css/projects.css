@@ -44,7 +44,6 @@
 .project-card-media {
   flex: 1 1 0;
   min-height: 0;
-  background: var(--overlay-subtle, rgba(0, 0, 0, 0.08));
   position: relative;
   overflow: hidden;
 }
@@ -89,39 +88,5 @@
 @media (max-height: 500px) {
   .projects-grid {
     grid-template-rows: repeat(1, 1fr);
-  }
-}
-
-/* Mobile: make the scroller vertical, single-column, full-width cards (no scrollbar). */
-@media (max-width: 700px) {
-  .projects-scroller {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  /* Hide scrollbars (keep scroll behavior) */
-  .projects-scroller::-webkit-scrollbar {
-    display: none;
-  }
-
-  .projects-grid {
-    width: 100%;
-    height: auto;
-    grid-template-columns: 1fr !important;
-    grid-template-rows: none !important;
-    grid-auto-flow: row;
-    row-gap: 12px;
-    box-sizing: border-box;
-    padding: 12px;
-  }
-
-  .project-card {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .project-card-media {
-    flex: 0 0 auto;
-    height: clamp(180px, 38vw, 280px);
   }
 }

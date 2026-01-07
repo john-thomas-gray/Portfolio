@@ -28,15 +28,11 @@ export function About() {
                 <p>
                   In the course of running my business, I programmed tools to
                   automate internal workflows and reduce days of human labor to
-                  the press of a button.
-                </p>
-
-                <p>
-                  Many of my projects are available here, including an app that
-                  enables low-vision users to access live screenings and other
-                  creative experiments. I also volunteer with{" "}
-                  <strong>Change Climate</strong>, building software to drive
-                  carbon reduction.
+                  the press of a button. Many of my projects are available here,
+                  including an app that enables low-vision users to access live
+                  screenings and other creative experiments. I also volunteer
+                  with <strong>Change Climate</strong>, building software to
+                  drive carbon reduction.
                 </p>
 
                 <p>
