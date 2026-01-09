@@ -5,6 +5,7 @@
   /* Text */
   --text-on-color: whitesmoke;
   --text-body: rgb(56, 56, 56);
+  --detail-font-weight: 200;
 
   /* Nav blocks */
   --main-one: #487ceb;
@@ -175,7 +176,6 @@ main {
   main {
     display: flex;
     flex-direction: column;
-
     flex: 1 1 auto;
     min-height: 0;
     overflow-y: auto;

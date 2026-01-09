@@ -22,7 +22,7 @@ export function ProjectDetail() {
         <div className="visual-center">
           {project.videoEmbedUrl ? (
             <iframe
-              className="visual-media"
+              className="visual-media visual-media-video"
               src={project.videoEmbedUrl}
               title={`${project.title} video`}
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

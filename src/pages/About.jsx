@@ -1,7 +1,7 @@
 import React from "react";
 import "../../css/about.css";
 import Socials from "../components/Socials";
-import portrait from "../../assets/images/standing.png";
+import portrait from "../../assets/images/beach-photo.jpg";
 import landscape from "../../assets/images/landscape.png";
 
 export function About() {
@@ -11,7 +11,7 @@ export function About() {
         <div className="content">
           <div className="column-two">
             <div className="image-container">
-              {/* <img src={portrait} /> */}
+              <img src={portrait} />
             </div>
           </div>
           <div className="column-one">
@@ -41,6 +41,7 @@ export function About() {
                 </p>
               </section>
             </div>
+            <div className="bottom" />
           </div>
         </div>
         <Socials />
