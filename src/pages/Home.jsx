@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import profileImg from "../../assets/images/portrait-wide.png";
-import wadjet from "../../assets/images/wadjet-whitesmoke.png";
-import tempBraille from "../../assets/images/braille-wadjet.png";
+import wadjet from "../../assets/images/wadjet-negative-2.png";
+import wadjetTextLogo from "../../assets/images/wadjet-text-logo.png";
+import tempBraille from "../../assets/images/wadjet-braille-logo.png";
 
 import Socials from "../components/Socials";
 
@@ -16,14 +17,16 @@ export function Home() {
           className="profile-img"
         />
       </div>
-      <div className="main-title">
+      <div className="center-title">
         <div className="text-body">
           <div className="text-name">John Gray</div>
           <span className="text-split">|</span>
-          <div className="text-title">Entrepreneur + Software Engineer</div>
+          <div className="text-title">
+            <div>Entrepreneur + Software Engineer</div>
+          </div>
         </div>
       </div>
-      <div className="main-pair">
+      <div className="bottom-pair">
         <a
           className="pair-one"
           href="https://www.wadjet.com"
@@ -34,11 +37,15 @@ export function Home() {
             <img
               className="pair-one-braille"
               src={tempBraille}
-              alt="'Out of Sight' (written in braille)"
+              alt="'Wadjet' (written in braille)"
             />
-            <span className="pair-one-text">Wadjet</span>
+            <img
+              className="pair-one-text"
+              src={wadjetTextLogo}
+              alt="Wadjet logo"
+            />
           </div>
-          <img className="wadjet" src={wadjet} />
+          <img className="wadjet" src={wadjet} alt="Wadjet eye logo" />
         </a>
         <a
           className="pair-two"

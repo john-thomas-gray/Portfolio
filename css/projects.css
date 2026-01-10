@@ -11,6 +11,8 @@
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  /* Enable container query units so cards can clamp to visible width */
+  container-type: inline-size;
 
   /* Hide scrollbars (keep scroll behavior via trackpad/touch) */
   scrollbar-width: none; /* Firefox */
@@ -22,15 +24,35 @@
 }
 
 .projects-grid {
-  --project-card-w: 500px;
+  /* Never allow cards to be wider than the visible scroller */
+  --project-card-w: min(500px, 100cqw);
   display: grid;
-  grid-template-rows: repeat(2, var(1fr));
+  grid-template-rows: repeat(2, 1fr);
   width: max-content;
   height: 100%;
 }
 
+/* Fallback if container query units aren't supported */
+@supports not (width: 1cqw) {
+  .projects-grid {
+    /* Approximate `main` width when the left nav is present */
+    --project-card-w: min(
+      500px,
+      max(0px, calc(100vw - clamp(160px, 22vw, 2000px)))
+    );
+  }
+
+  @media (max-width: 700px) {
+    /* Nav becomes top bar; main is full viewport width */
+    .projects-grid {
+      --project-card-w: min(500px, 100vw);
+    }
+  }
+}
+
 .project-card {
   width: var(--project-card-w);
+  max-width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -39,6 +61,13 @@
   overflow: hidden;
   box-sizing: border-box;
   min-height: 0;
+
+  border-right: solid 4px var(--border-color);
+}
+
+.projects-grid > .project-card:nth-child(even) {
+  border-top: solid 4px var(--border-color);
+  box-sizing: border-box;
 }
 
 .project-card-media {
@@ -62,14 +91,10 @@
   padding: 10px 12px;
   background-color: var(--main-seven);
   font-weight: 600;
+  font-size: clamp(14px, 1.1vw, 18px);
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  border-left: dotted #c4c3c3 1px;
-  border-left: dotted #c4c3c3 1px;
-}
-
-.project-card:hover {
-  border: white solid 2px;
+  border-left: none;
 }
 
 .project-card:hover .project-card-name {
@@ -77,16 +102,16 @@
   color: var(--main-three);
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  width: max-content;
-  height: 100%;
-}
-
 /* Keep this in sync with `projects.jsx` GRID_MAX_HEIGHT. */
 @media (max-height: 500px) {
   .projects-grid {
     grid-template-rows: repeat(1, 1fr);
+  }
+
+  /* In single-row mode, just give each card a complete top/bottom border. */
+  .projects-grid > .project-card {
+    border-top: solid 4px var(--border-color);
+    border-bottom: solid 4px var(--border-color);
+    box-sizing: border-box;
   }
 }

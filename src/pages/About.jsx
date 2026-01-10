@@ -7,15 +7,11 @@ import landscape from "../../assets/images/landscape.png";
 export function About() {
   return (
     <>
-      <div className="about">
-        <div className="content">
-          <div className="column-two">
-            <div className="image-container">
-              <img src={portrait} />
-            </div>
-          </div>
+      <container>
+        <section className="about">
           <div className="column-one">
-            <div className="top">
+            <div className="top" />
+            <div className="middle">
               <section className="bio">
                 <p>
                   Hello there. I’m <strong>John Gray</strong>, an entrepreneur
@@ -26,13 +22,13 @@ export function About() {
                 </p>
 
                 <p>
-                  In the course of running my business, I programmed tools to
-                  automate internal workflows and reduce days of human labor to
-                  the press of a button. Many of my projects are available here,
-                  including an app that enables low-vision users to access live
-                  screenings and other creative experiments. I also volunteer
-                  with <strong>Change Climate</strong>, building software to
-                  drive carbon reduction.
+                  In the course of running my business, I began programming
+                  tools to automate days of menial office work to a single
+                  button press. To mitigate other forms of human suffering I now
+                  create humanitarian software, including an app that enables
+                  low-vision users to access live film screenings. I also
+                  volunteer with <strong>Change Climate</strong>, building
+                  technical solutions which drive carbon reduction.
                 </p>
 
                 <p>
@@ -43,9 +39,15 @@ export function About() {
             </div>
             <div className="bottom" />
           </div>
-        </div>
+          <div className="column-two">
+            <div className="image-container">
+              <img src={portrait} />
+            </div>
+          </div>
+          <div className="column-three" aria-hidden="true" />
+        </section>
         <Socials />
-      </div>
+      </container>
     </>
   );
 }
