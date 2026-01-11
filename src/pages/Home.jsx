@@ -6,6 +6,7 @@ import wadjetTextLogo from "../../assets/images/wadjet-text-logo.png";
 import tempBraille from "../../assets/images/wadjet-braille-logo.png";
 
 import Socials from "../components/Socials";
+import "../../css/home.css";
 
 export function Home() {
   return (

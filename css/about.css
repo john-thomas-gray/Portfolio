@@ -1,14 +1,15 @@
-.container {
+.about-container {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   height: 100vh;
-  width: 100%;
 }
 .about {
   display: flex;
   flex-direction: row;
-  flex: 1 1 0;
+  flex: 1 1 auto;
   width: 100%;
+  height: 100%;
   background: whitesmoke;
 }
 
@@ -18,61 +19,63 @@
 
 .column-one {
   display: flex;
-  flex: 0 0 auto;
+  flex: 0 1 43%;
   flex-direction: column;
+  background-color: red;
 }
 
 .column-two {
   display: flex;
-  flex: 0 0 auto;
+  flex: 1 1 50%;
+  flex-direction: column;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  min-height: 0;
 }
 
 .column-three {
   display: flex;
-  flex: 0 0 auto;
-  background-color: var(--main-three);
+  flex: 0 1 7%;
+  background-color: yellow;
 }
 
-@media (max-width: 1920px) {
-  .column-three {
-    flex: 0 1;
-  }
-}
-
-.image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--border-color);
-  border: solid 12px var(--border-color);
-  min-width: 0;
-  min-height: 0;
-  max-width: 1000px;
-}
-
-.image-container img {
-  width: 100%;
+/* .image-container {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+} */
+
+.beach {
+  flex: 0 1 0;
+  width: 100%;
+  min-height: 100vh;
   object-fit: cover;
   filter: sepia(35%);
 }
 
 .top {
-  flex: 2;
+  display: flex;
+  flex: 0 1 15%;
   background-color: var(--main-three);
   border-bottom: solid 6px var(--border-color);
 }
 
 .middle {
-  flex: 3;
-  background-color: rgb(11, 6, 46);
   display: flex;
+  flex: 1 1 70%;
+  background-color: rgb(11, 6, 46);
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 300px;
+}
+
+.bottom {
+  display: flex;
+  flex: 1 1 15%;
+  background-color: var(--main-one);
+  border-top: solid var(--border-width) var(--border-color);
 }
 
 .bio {
@@ -91,10 +94,4 @@
   font-weight: var(--detail-font-weight);
   font-size: clamp(14px, 1.6vw, 24px);
   text-align: left;
-}
-
-.bottom {
-  flex: 2;
-  background-color: var(--main-one);
-  border-top: solid var(--border-width) var(--border-color);
 }
