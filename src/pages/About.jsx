@@ -12,7 +12,7 @@ export function About() {
           <div className="column-one">
             <div className="top" />
             <div className="middle">
-              {/* <section className="bio">
+              <section className="bio">
                 <p>
                   Hello there. I’m <strong>John Gray</strong>, an entrepreneur
                   and software engineer. The post production company I founded,{" "}
@@ -23,28 +23,27 @@ export function About() {
 
                 <p>
                   In the course of running my business, I began programming
-                  tools to automate days of menial office work to a single
-                  button press. To mitigate other forms of human suffering I now
-                  create humanitarian software, including an app that enables
-                  low-vision users to access live film screenings. I also
-                  volunteer with <strong>Change Climate</strong>, building
-                  technical solutions which drive carbon reduction.
+                  automation tools to reduce days of menial office work to a
+                  single button press. To mitigate other forms of human
+                  suffering, I now create humanitarian software, including an
+                  app that enables low-vision users to access live film
+                  screenings. I also volunteer with{" "}
+                  <strong>Change Climate</strong>, building technical solutions
+                  which drive carbon reduction.
                 </p>
 
                 <p>
                   Outside of work, I love writing, reading, cooking, creating
                   games and the San Francisco Giants. Born and live in New York.
                 </p>
-              </section> */}
+              </section>
             </div>
             <div className="bottom" />
           </div>
           <div className="column-two">
             <img className="beach" src={portrait} />
           </div>
-          <div className="column-three">
-            <p style={{ color: "white" }}>Column Three</p>
-          </div>
+          <div className="column-three"></div>
         </section>
         <Socials />
       </div>

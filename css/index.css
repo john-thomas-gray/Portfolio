@@ -9,20 +9,20 @@
 
   /* Nav blocks */
   --main-one: #487ceb;
-  --main-one-hover: #67959a;
+  --main-one-alt: #67959a;
   --secondary-one: #9bc1fb;
 
   --main-two: #4e56b1;
-  --main-two-hover: #57367d;
+  --main-two-alt: #57367d;
   --secondary-two: #bbc1ff;
 
   --main-three: #1c9d9f;
-  --main-three-hover: #7291c5;
+  --main-three-alt: #7291c5;
   --secondary-three: #6bd2d1;
 
   /* Header / name bar */
   --main-four: rgb(164, 194, 189);
-  --main-four-hover: rgb(255, 232, 115);
+  --main-four-alt: rgb(255, 232, 115);
   --secondary-four: rgb(56, 56, 56);
 
   /* Home pair section */
@@ -31,7 +31,7 @@
 
   /* Socials */
   --main-six: #ededed;
-  --main-six-hover: #ffffff;
+  --main-six-alt: #ffffff;
   --secondary-six: #c1c1c1;
 
   /* Surfaces / misc */
@@ -147,15 +147,15 @@ a {
 }
 
 #nav-one:hover {
-  background-color: var(--main-one-hover);
+  background-color: var(--main-one-alt);
 }
 
 #nav-two:hover {
-  background-color: var(--main-two-hover);
+  background-color: var(--main-two-alt);
 }
 
 #nav-three:hover {
-  background-color: var(--main-three-hover);
+  background-color: var(--main-three-alt);
 }
 
 main {
@@ -207,7 +207,7 @@ main {
 }
 
 .social-button:hover {
-  background-color: var(--main-six-hover);
+  background-color: var(--main-six-alt);
 }
 
 .social-button img {

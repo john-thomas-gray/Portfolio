@@ -98,7 +98,7 @@
 }
 
 .project-card:hover .project-card-name {
-  background-color: var(--main-six-hover);
+  background-color: var(--main-six-alt);
   color: var(--main-three);
 }
 
