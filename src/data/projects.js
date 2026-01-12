@@ -99,7 +99,7 @@ export const PROJECTS = [
     title: "Spreadsheet Converter",
     cardImage: spreadsheetConverterThumbnail,
     description:
-      "A lightweight Python utility that batch-converts dialog spreadsheets between various formats (XLSX, CSV, SRT, etc.) while enforcing client-specific formatting rules. Built with pandas and Excel tooling, it cleans and restructures subtitle/dialog data (e.g., filtering and rewriting Spanish-only lines, normalizing speaker/character fields, and producing delivery-ready columns) through simple input/output folders and one-command scripts.",
+      "A lightweight Python utility that batch-converts spreadsheets between various formats (XLSX, CSV, SRT, etc.) while enforcing client-specific formatting rules. Built with pandas and Excel tooling, it cleans and restructures subtitle/dialog data (e.g., filtering and rewriting Spanish-only lines, normalizing speaker/character fields, and producing delivery-ready columns) through simple input/output folders and one-command scripts.",
     githubUrl: "https://github.com/john-thomas-gray/spreadsheet-formatter",
     liveUrl: null,
     videoEmbedUrl: null,
