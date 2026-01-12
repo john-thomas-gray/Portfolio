@@ -1,4 +1,5 @@
 import changeClimateLogo from "../../assets/images/change-climate-logo.png";
+import spreadsheetConverterThumbnail from "../../assets/images/spreadsheet-converter-thumbnail.png";
 import colorChameleon from "../../assets/images/colorchameleon.png";
 import conferencego from "../../assets/images/conferencego.png";
 import fourDogNightTitle from "../../assets/images/fourDogNightTitle.png";
@@ -96,7 +97,7 @@ export const PROJECTS = [
   {
     slug: "spreadsheet-converter",
     title: "Spreadsheet Converter",
-    cardImage: placeholder,
+    cardImage: spreadsheetConverterThumbnail,
     description: "Spreadsheet Converter. (Details coming soon.)",
     githubUrl: "https://github.com/john-thomas-gray/spreadsheet-formatter",
     liveUrl: null,
