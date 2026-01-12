@@ -1,6 +1,6 @@
 import changeClimateLogo from "../../assets/images/change-climate-logo.png";
 import spreadsheetConverterThumbnail from "../../assets/images/spreadsheet-converter-thumbnail.png";
-import fourDogNightTitle from "../../assets/images/fourDogNightTitle.png";
+import fourDogNightTitle from "../../assets/images/FourDogNightTitle.png";
 import amcTheatres from "../../assets/images/amc-theatres.jpg";
 import wadjet from "../../assets/images/wadjet-logo.jpg";
 import booky from "../../assets/images/booky-logo.jpg";
