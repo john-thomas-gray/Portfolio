@@ -19,7 +19,7 @@ The app uses a shared layout (header/nav) with nested routes via `<Outlet />`:
 - `/about` → About
 - `*` → 404 (client-side)
 
-## Project structure (high level)
+## Project structure
 
 - `src/` — React app source
 - `src/pages/` — route-level pages
