@@ -1,12 +1,12 @@
 import React from "react";
 
-import profileImg from "../../assets/images/portrait-wide.png";
-import wadjet from "../../assets/images/wadjet-negative-2.png";
-import wadjetTextLogo from "../../assets/images/wadjet-text-logo.png";
-import tempBraille from "../../assets/images/wadjet-braille-logo.png";
+import profileImg from "src/assets/images/portrait-wide.png";
+import wadjet from "src/assets/images/wadjet-negative-2.png";
+import wadjetTextLogo from "src/assets/images/wadjet-text-logo.png";
+import tempBraille from "src/assets/images/wadjet-braille-logo.png";
 
 import Socials from "../components/Socials";
-import "../../css/home.css";
+import "src/css/home.css";
 
 export function Home() {
   return (

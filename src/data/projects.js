@@ -1,11 +1,11 @@
-import changeClimateLogo from "../../assets/images/change-climate-logo.png";
-import spreadsheetConverterThumbnail from "../../assets/images/spreadsheet-converter-thumbnail.png";
-// import fourDogNightTitle from "../../assets/images/fourDogNightTitle.png";
-import amcTheatres from "../../assets/images/amc-theatres.jpg";
-import wadjet from "../../assets/images/wadjet-logo.jpg";
-import booky from "../../assets/images/booky-logo.jpg";
-import gigTimer from "../../assets/images/gig-timer.png";
-import colorChameleonThumbnail from "../../assets/images/color-chameleon-title.png";
+import changeClimateLogo from "src/assets/images/change-climate-logo.png";
+import spreadsheetConverterThumbnail from "src/assets/images/spreadsheet-converter-thumbnail.png";
+import fourDogNightTitle from "src/assets/images/fourDogNightTitle.png";
+import amcTheatres from "src/assets/images/amc-theatres.jpg";
+import wadjet from "src/assets/images/wadjet-logo.jpg";
+import booky from "src/assets/images/booky-logo.jpg";
+import gigTimer from "src/assets/images/gig-timer.png";
+import colorChameleonThumbnail from "src/assets/images/color-chameleon-title.png";
 
 export const PROJECTS = [
   {
@@ -60,16 +60,16 @@ export const PROJECTS = [
     videoEmbedUrl: null,
   },
 
-  // {
-  //   slug: "four-dog-night",
-  //   title: "Four Dog Night",
-  //   cardImage: fourDogNightTitle,
-  //   description:
-  //     "A single page application (SPA) board game built with React state and logic. Complex frontend logic creates elaborate gameplay and dynamic move options. Bold aesthetics designed in Figma and executed in React with tasteful microinteractions. 2-player and 4-player modes support different game logic. Cute dogs!",
-  //   githubUrl: "https://github.com/john-thomas-gray/four-dog-night",
-  //   liveUrl: "https://www.fourdognight.com",
-  //   videoEmbedUrl: null,
-  // },
+  {
+    slug: "four-dog-night",
+    title: "Four Dog Night",
+    cardImage: fourDogNightTitle,
+    description:
+      "A single page application (SPA) board game built with React state and logic. Complex frontend logic creates elaborate gameplay and dynamic move options. Bold aesthetics designed in Figma and executed in React with tasteful microinteractions. 2-player and 4-player modes support different game logic. Cute dogs!",
+    githubUrl: "https://github.com/john-thomas-gray/four-dog-night",
+    liveUrl: "https://www.fourdognight.com",
+    videoEmbedUrl: null,
+  },
   {
     slug: "Booky",
     title: "Booky",

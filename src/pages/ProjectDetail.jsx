@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { PROJECTS } from "../data/projects";
-import "../../css/project-detail.css";
-import github from "../../assets/images/github.png";
+import "src/css/project-detail.css";
+import github from "src/assets/images/github.png";
 
 export function ProjectDetail() {
   const { slug } = useParams();

@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import "../../css/projects.css";
+import "src/css/projects.css";
 import { PROJECTS } from "../data/projects";
 
 function ProjectCard({ name, image, to, style }) {

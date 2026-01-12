@@ -1,8 +1,8 @@
 import React, { useLayoutEffect, useRef } from "react";
-import "../../css/about.css";
+import "src/css/about.css";
 import Socials from "../components/Socials";
-import portrait from "../../assets/images/beach-photo.jpg";
-import landscape from "../../assets/images/landscape.png";
+import portrait from "src/assets/images/beach-photo.jpg";
+import landscape from "src/assets/images/landscape.png";
 
 export function About() {
   const middleRef = useRef(null);
