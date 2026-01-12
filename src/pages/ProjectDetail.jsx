@@ -17,7 +17,6 @@ export function ProjectDetail() {
     if (!wrap || !p) return;
 
     const fit = () => {
-      // Reset to CSS-defined size first (so we can re-expand when space grows)
       p.style.removeProperty("font-size");
 
       const computed = window.getComputedStyle(p);
@@ -31,7 +30,6 @@ export function ProjectDetail() {
       const marginBottom = Number.parseFloat(computed.marginBottom) || 0;
       const available = Math.max(0, wrapHeight - marginTop - marginBottom);
 
-      // If it already fits, we're done.
       const currentHeight = p.getBoundingClientRect().height;
       if (currentHeight <= available) return;
 
@@ -50,7 +48,6 @@ export function ProjectDetail() {
       p.style.fontSize = `${lo}px`;
     };
 
-    // Initial + on resize (both layout and viewport)
     fit();
     const ro = new ResizeObserver(() => fit());
     ro.observe(wrap);

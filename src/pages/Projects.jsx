@@ -30,7 +30,6 @@ export function Projects() {
   const [isShortViewport, setIsShortViewport] = useState(false);
 
   useEffect(() => {
-    // Keep this in sync with `projects.css` media query.
     const GRID_MAX_HEIGHT = "500px";
     const mq = window.matchMedia(`(max-height: ${GRID_MAX_HEIGHT})`);
     const sync = () => setIsShortViewport(mq.matches);
