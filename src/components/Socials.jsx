@@ -1,6 +1,6 @@
 import React from "react";
 import github from "src/assets/images/github.png";
-import linkedIn from "src/assets/images/linkedIn.png";
+import linkedIn from "src/assets/images/linkedin.png";
 import email from "src/assets/images/email.png";
 
 export default function Socials() {
