@@ -57,7 +57,7 @@ export const PROJECTS = [
     title: "AMC Theatres Clone",
     cardImage: amcTheatres,
     description:
-      "An exact copy of the AMC Theatres mobile app I built to demonstrate my frontend skills. The app is built with React Native + Expo Router (TypeScript) and features a polished browsing experience for now playing/coming soon titles powered by the TMDB API, plus theatre discovery using location + Google Places. The app includes a full ticket-purchase flow (showtimes, seat selection, cart, concessions) with animated UI, bottom sheets, and app-wide state via React Context. A lightweight Node/Express + Stripe PaymentIntent service supports a realistic checkout architecture, with Clerk integrated for authentication.",
+      "An exact copy of the AMC Theatres mobile app I built to demonstrate my ability to build to spec from someone else's design. The app is built with React Native + Expo Router (TypeScript) and features a polished browsing experience for now playing/coming soon titles powered by the TMDB API, plus theatre discovery using location + Google Places. The app includes a full ticket-purchase flow (showtimes, seat selection, cart, concessions) with animated UI, bottom sheets, and app-wide state via React Context. A lightweight Node/Express + Stripe PaymentIntent service supports a realistic checkout architecture, with Clerk integrated for authentication.",
     githubUrl: "https://github.com/john-thomas-gray/AMC-clone",
     liveUrl: null,
     videoEmbedUrl: null,
