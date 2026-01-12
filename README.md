@@ -1,25 +1,35 @@
-# Portfolio Website (React)
+# Portfolio
 
-This portfolio is now a **React + Vite** app using **React Router** with nested routes.
+A fast, responsive personal portfolio built with **React + Vite** and **React Router**. It includes a projects index with **detail pages** (`/projects/:slug`), an About page, and a client-side 404.
 
-## Routing (nested layout)
+## Tech stack
 
-Shared layout (header/nav) lives at the top level, and pages render as children via `<Outlet />`:
+- **React 18** (UI)
+- **Vite** (dev server + build)
+- **React Router** (nested routes + layout)
+- **Vanilla CSS** (`css/index.css`)
+
+## Routes
+
+The app uses a shared layout (header/nav) with nested routes via `<Outlet />`:
 
 - `/` → Home
 - `/projects` → Projects
+- `/projects/:slug` → Project detail
 - `/about` → About
 - `*` → 404 (client-side)
 
-## Styling + assets
+## Project structure (high level)
 
-- CSS: `css/index.css` (imported from `src/main.jsx`)
-- Images/fonts: `assets/` (import from React as needed)
-- Favicon: `public/favicon.png`
+- `src/` — React app source
+- `src/pages/` — route-level pages
+- `src/components/` — reusable UI components + layout
+- `src/data/projects.js` — project metadata/content
+- `css/index.css` — global styles (imported from `src/main.jsx`)
+- `assets/` — images/icons
+- `public/` — static files (e.g. `favicon.png`)
 
 ## Run locally
-
-From the repo root:
 
 ```bash
 npm install
@@ -27,3 +37,10 @@ npm run dev
 ```
 
 Vite will print the local URL in your terminal.
+
+## Build / preview
+
+```bash
+npm run build
+npm run preview
+```
