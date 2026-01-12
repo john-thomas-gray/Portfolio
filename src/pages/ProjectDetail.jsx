@@ -2,12 +2,14 @@ import React, { useEffect, useRef } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { PROJECTS } from "../data/projects";
 import "../../css/project-detail.css";
+import github from "../../assets/images/github.png";
 
 export function ProjectDetail() {
   const { slug } = useParams();
   const project = PROJECTS.find((p) => p.slug === slug);
   const descriptionWrapRef = useRef(null);
   const descriptionTextRef = useRef(null);
+  const visualHref = project?.liveUrl ?? project?.githubUrl;
 
   if (!project) return <Navigate to="/404" replace />;
 
@@ -70,6 +72,15 @@ export function ProjectDetail() {
       <div className="visual">
         <div className="visual-left"></div>
         <div className="visual-center">
+          {visualHref ? (
+            <a
+              className="visual-center-link"
+              href={visualHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open ${project.title}`}
+            />
+          ) : null}
           {project.videoEmbedUrl ? (
             <iframe
               className="visual-media visual-media-video"

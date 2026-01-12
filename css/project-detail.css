@@ -7,7 +7,7 @@
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
-  border: 3px solid red;
+
   box-sizing: border-box;
 }
 
@@ -85,6 +85,7 @@ h1 {
 
 .visual-center {
   flex: 1 1 auto;
+  position: relative;
   height: 100%;
   width: auto;
   aspect-ratio: 16 / 9;
@@ -92,6 +93,14 @@ h1 {
   background-color: black;
   border-inline: 12px var(--border-color) solid;
   box-sizing: border-box;
+}
+
+.visual-center-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  cursor: pointer;
 }
 
 .visual-right {
@@ -102,6 +111,8 @@ h1 {
 .visual-media {
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .visual-media-video {
@@ -133,6 +144,15 @@ h1 {
   color: var(--text-on-color);
 }
 
+.description-right a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  border: red solid;
+}
+
 @media (max-width: 989px) {
   .title-right {
     display: none;
@@ -159,8 +179,7 @@ h1 {
 @media (max-width: 1400px) {
   .title-left {
     flex: 1 0 1;
-    border: red 10px solid;
-    color: red;
+
     box-sizing: border-box;
   }
 
