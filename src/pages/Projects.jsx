@@ -57,8 +57,24 @@ export function Projects() {
       else if (el.scrollLeft > seg * 1.5) el.scrollLeft -= seg;
     };
 
+    const onWheel = (event) => {
+      if (event.ctrlKey) return;
+
+      if (!event.deltaY) return;
+
+      if (el.scrollWidth <= el.clientWidth) return;
+
+      el.scrollLeft += event.deltaY + (event.deltaX || 0);
+      event.preventDefault();
+    };
+
     el.addEventListener("scroll", onScroll, { passive: true });
-    return () => el.removeEventListener("scroll", onScroll);
+
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => {
+      el.removeEventListener("scroll", onScroll);
+      el.removeEventListener("wheel", onWheel);
+    };
   }, []);
 
   return (
