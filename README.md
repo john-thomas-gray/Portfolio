@@ -7,7 +7,7 @@ A fast, responsive personal portfolio built with **React + Vite** and **React Ro
 - **React 18** (UI)
 - **Vite** (dev server + build)
 - **React Router** (nested routes + layout)
-- **Vanilla CSS** (`css/index.css`)
+- **Vanilla CSS** (`src/css/index.css`)
 
 ## Routes
 
@@ -25,8 +25,8 @@ The app uses a shared layout (header/nav) with nested routes via `<Outlet />`:
 - `src/pages/` — route-level pages
 - `src/components/` — reusable UI components + layout
 - `src/data/projects.js` — project metadata/content
-- `css/index.css` — global styles (imported from `src/main.jsx`)
-- `assets/` — images/icons
+- `src/css/` — global + page styles (imported from `src/main.jsx`)
+- `src/assets/` — images/icons
 - `public/` — static files (e.g. `favicon.png`)
 
 ## Run locally

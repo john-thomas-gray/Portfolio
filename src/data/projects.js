@@ -107,7 +107,7 @@ export const PROJECTS = [
     title: "Portfolio",
     cardImage: portfolio,
     description:
-      "A single page web application showcasing my skills and projects, built with the React.js framework. Written in JavaScript, with JSX, CSS, and Bootstrap for styling. The nav bar uses DOM manipulation to take the user to the selected section. UseEffect hook makes the message follow the user's cursor. EmailJS, a third-party API, powers the contact form. I deployed the site with Netlify.",
+      "A Vite-powered React portfolio that showcases my work through a Home, About, Projects, and dynamic Project Detail flow. React Router drives the navigation, while the project catalog is data-driven and mapped into cards with detail pages by slug. Custom CSS and a tailored layout highlight photography, branding, and product work alongside clear social/contact links.",
     githubUrl: "https://github.com/john-thomas-gray/portfolio",
     liveUrl: null,
     videoEmbedUrl: null,
