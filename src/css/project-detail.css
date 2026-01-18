@@ -145,6 +145,7 @@ h1 {
   font-weight: var(--detail-font-weight);
   font-size: clamp(16px, 2vw, 23px);
   margin-top: 30px;
+  margin-bottom: 30px;
   margin-right: 12%;
   margin-left: 30px;
   text-align: justify;
