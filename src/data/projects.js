@@ -6,6 +6,8 @@ import wadjet from "src/assets/images/wadjet-logo.jpg";
 import booky from "src/assets/images/booky-logo.jpg";
 import gigTimer from "src/assets/images/gig-timer.png";
 import colorChameleonThumbnail from "src/assets/images/color-chameleon-title.png";
+import fourSight from "src/assets/images/foursight-thumbnail.png";
+import portfolio from "src/assets/images/portfolio-thumbnail.png";
 
 export const PROJECTS = [
   {
@@ -29,16 +31,16 @@ export const PROJECTS = [
     liveUrl: null,
     videoEmbedUrl: null,
   },
-  // {
-  //   slug: "portfolio",
-  //   title: "Portfolio",
-  //   cardImage: profile,
-  //   description:
-  //     "A single page web application showcasing my skills and projects, built with the React.js framework. Written in JavaScript, with JSX, CSS, and Bootstrap for styling. The nav bar uses DOM manipulation to take the user to the selected section. UseEffect hook makes the message follow the user's cursor. EmailJS, a third-party API, powers the contact form. I deployed the site with Netlify.",
-  //   githubUrl: "https://github.com/john-thomas-gray/portfolio",
-  //   liveUrl: null,
-  //   videoEmbedUrl: null,
-  // },
+  {
+    slug: "4sight",
+    title: "4Sight",
+    cardImage: fourSight,
+    description: "4Sight is a mobile-first, cross‑platform strategy game built with Expo + React Native, using expo-router for file-based navigation and a clean screen structure. The UI is styled with NativeWind (Tailwind) for fast iteration and consistent theming, while React Native Gesture Handler and Reanimated power responsive drag/drop interactions and smooth, physics-like animations central to gameplay. Game state is organized through React context, with persistence via AsyncStorage for “continue game” flows, and the rules/board updates are factored into reusable utilities. The project is tested with Jest to keep core logic reliable as the app scales across iOS, Android, and web.",
+    githubUrl: "https://github.com/john-thomas-gray/4Sight",
+    liveUrl: null,
+    videoEmbedUrl: null,
+  },
+
   {
     slug: "wadjet",
     title: "Wadjet.com",
@@ -100,22 +102,15 @@ export const PROJECTS = [
     liveUrl: null,
     videoEmbedUrl: null,
   },
-  // {
-  //   slug: "tell",
-  //   title: "Tell",
-  //   cardImage: placeholder,
-  //   description: "Tell. (Details coming soon.)",
-  //   githubUrl: null,
-  //   liveUrl: null,
-  //   videoEmbedUrl: null,
-  // },
-  // {
-  //   slug: "4sight",
-  //   title: "4Sight",
-  //   cardImage: placeholder,
-  //   description: "4Sight. (Details coming soon.)",
-  //   githubUrl: null,
-  //   liveUrl: null,
-  //   videoEmbedUrl: null,
-  // },
+  {
+    slug: "portfolio",
+    title: "Portfolio",
+    cardImage: portfolio,
+    description:
+      "A single page web application showcasing my skills and projects, built with the React.js framework. Written in JavaScript, with JSX, CSS, and Bootstrap for styling. The nav bar uses DOM manipulation to take the user to the selected section. UseEffect hook makes the message follow the user's cursor. EmailJS, a third-party API, powers the contact form. I deployed the site with Netlify.",
+    githubUrl: "https://github.com/john-thomas-gray/portfolio",
+    liveUrl: null,
+    videoEmbedUrl: null,
+  },
+
 ];
