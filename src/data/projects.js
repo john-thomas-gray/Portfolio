@@ -3,7 +3,7 @@ import spreadsheetConverterThumbnail from "src/assets/images/spreadsheet-convert
 import fourDogNightTitle from "src/assets/images/fourDogNightTitle.png";
 import amcTheatres from "src/assets/images/amc-theatres.jpg";
 import wadjet from "src/assets/images/wadjet-logo.jpg";
-import booky from "src/assets/images/booky-logo.jpg";
+import booky from "src/assets/images/booky-logo.png";
 import gigTimer from "src/assets/images/gig-timer.png";
 import colorChameleonThumbnail from "src/assets/images/color-chameleon-title.png";
 import fourSight from "src/assets/images/foursight-thumbnail.png";
